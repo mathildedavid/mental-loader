@@ -100,6 +100,17 @@ export default function FoodLogCard() {
           </section>
 
           <section className="space-y-2">
+            <h3 className="font-medium">Try next</h3>
+            <p className="text-sm text-muted-foreground">
+              {nextUp.length > 0 ? (
+                <>We recommend trying <span className="font-medium text-foreground">{nextUp[0]}</span> next. It's gentle, nutritious, and perfect for baby's developing palate.</>
+              ) : (
+                <>Great job! You've tried all our starter recommendations. Consider introducing new textures or combinations of foods baby already enjoys.</>
+              )}
+            </p>
+          </section>
+
+          <section className="space-y-2">
             <h3 className="font-medium">Tried so far</h3>
             <div className="flex flex-wrap gap-2">
               {tried.length ? (
